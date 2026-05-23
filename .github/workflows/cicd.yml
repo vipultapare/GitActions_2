@@ -4,18 +4,19 @@ on:
  workflow_dispatch:
 
 jobs:
+
   code:
-    runs-on: ubuntu-latest 
-    steps:
-      - name: Checkout Code
-        run: echo "Code clone from github"
-   build:
      runs-on: ubuntu-latest 
      steps:
-       - name: Build Docker Container
-         run: echo "Docker Container Build"
-   deploy:
-     runs-on: ubuntu-latest 
-     steps:
-       - name: Deploying the app
-         run: App Deployed 
+       - name: Checkout Code
+         run: echo "Code clone from github"
+    build:
+      runs-on: ubuntu-latest 
+      steps:
+        - name: Build Docker Container
+          run: echo "Docker Container Build"
+    deploy:
+      runs-on: ubuntu-latest 
+      steps:
+        - name: Deploying the app
+          run: App Deployed 
