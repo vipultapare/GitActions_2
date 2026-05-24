@@ -8,6 +8,7 @@ on:
 permissions:
   pages: write
   id-token: write
+  contents: read
   
 jobs:
   deploy:
@@ -28,6 +29,7 @@ jobs:
         path: '.'
 
     - name: Deploy to github pages
+      id: deployment
       uses: actions/deploy-pages@v4
     
     
