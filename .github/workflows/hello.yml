@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - '**.html'
+      - '**.yml'
 # This are jobs inside workflow
 jobs:
   # Name Of Job
