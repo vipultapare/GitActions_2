@@ -2,7 +2,16 @@ name: CICD
 
 on:
   workflow_dispatch:
-
+   inputs:
+    environement:
+      description: This is the environement where this flow runs
+      default: 'dev'
+      required: true
+      type: choice
+      options:
+        - dev
+        - prod
+        - staging
 jobs:
   code:
     runs-on: ubuntu-latest
