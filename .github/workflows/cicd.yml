@@ -27,6 +27,7 @@ jobs:
         run: echo "Docker Container Build"
 
   deploy:
+    if: inputs.environement == 'dev'
     needs: build
     runs-on: ubuntu-latest
     steps:
