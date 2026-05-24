@@ -4,6 +4,8 @@ name: Hello Workflow
 on: 
   push:
     branches: [main]
+    paths:
+      - '**.html'
 # This are jobs inside workflow
 jobs:
   # Name Of Job
