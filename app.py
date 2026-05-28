@@ -1,7 +1,10 @@
-def greet_user(name):
-    """This function greets the person passed in as a parameter."""
-    print(f"Hello, {name}! Welcome to Python.")
+from flask import Flask, render_template
 
-# Calling the function
-user_name = "Alice"
-greet_user(user_name)
+app = Flask(__name__, template_folder='.')
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)
