@@ -23,4 +23,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ vars.DOCKERHUB_USERNAME }}/portfolio:${{ vars.IMAGE_TAG }}
+          tags: ${{ vars.DOCKERHUB_USER }}/portfolio:latest
